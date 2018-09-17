@@ -1,3 +1,3 @@
 # badpythonsshhoneypot
-a very badly programmed ssh honeypot\n
+a very badly programmed ssh honeypot
 inspired by https://github.com/jaksi/sshesame
