@@ -17,4 +17,7 @@ mv ./id_rsa ~/honeypot/ <br />
 mv ./id_rsa.pub ~/honeypot/ <br />
 cd ~/honeypot/ <br />
 python ./honeypot.py <br />
-(the honeypot listens on port 2222)
+# Test the honeypot
+ssh root@127.0.0.1 -p 2222 <br />
+(the password is "password")
+
