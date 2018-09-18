@@ -1,5 +1,6 @@
 # badpythonsshhoneypot
-a very badly programmed ssh honeypot  <br />
+badly made ssh honeypot  <br />
+made using python and the twisted library <br />
 inspired by https://github.com/jaksi/sshesame <br />
 feel free to fork this :-)
 # How to use (On linux)
