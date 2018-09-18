@@ -3,7 +3,7 @@ badly made ssh honeypot  <br />
 made using python and the twisted library <br />
 inspired by https://github.com/jaksi/sshesame <br />
 feel free to fork this :-)
-# How to use (On linux)
+# How to use (On GNU/Linux)
 sudo apt-get install python-pip <br />
 pip install twisted <br />
 pip install pyOpenSSL <br /> 
