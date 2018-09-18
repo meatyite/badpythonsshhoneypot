@@ -9,7 +9,6 @@ from twisted.internet import reactor
 from zope.interface import implements
 
 
-
 class SSHDemoProtocol(recvline.HistoricRecvLine):
     def __init__(self, user):
        self.user = user
@@ -54,7 +53,7 @@ class SSHDemoProtocol(recvline.HistoricRecvLine):
         self.terminal.nextLine()
 
     def do_whoami(self):
-        self.terminal.write(username)
+        self.terminal.write("root")
         self.terminal.nextLine()
 
     def do_exit(self):
@@ -77,13 +76,12 @@ class SSHDemoProtocol(recvline.HistoricRecvLine):
             if args[0] == "/proc/version":
                 self.terminal.write("Linux version 4.13.0-32-generic (buildd@lgw01-amd64-004) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.5)) #35~16.04.1-Ubuntu SMP Thu Jan 25 10:13:43 UTC 2018")
                 self.terminal.nextLine()
+            elif args[0] == "/proc" or args[0] == "/proc/" or args[0] == "/etc" or args[0] == "/etc/" or args[0] == "/":
+                self.terminal.write("cat: " + args[0] + ": Is a directory")
+                self.terminal.nextLine()
             else:
                 self.terminal.write("cat: " + args[0] + ": No such file or directory")
                 self.terminal.nextLine()
-
-    def do_who(self):
-        self.terminal.write("root     tty7         2018-09-16 18:43 (:0)")
-        self.terminal.nextLine()
 
     def do_w(self):
         self.terminal.write(" 17:22:40 up 22:38,  1 user,  load average: 0.77, 0.93, 0.86\nUSER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT\nroot     tty7     :0               א'18   10:14m 10:16   0.66s /usr/lib/gnome-session/gnome-session-binary --session=pantheon\nroot     tty7     :0               א'18   10:14m 10:16   0.66s w")
