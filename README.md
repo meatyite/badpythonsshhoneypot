@@ -1,6 +1,7 @@
 # badpythonsshhoneypot
 a very badly programmed ssh honeypot  <br />
-inspired by https://github.com/jaksi/sshesame
+inspired by https://github.com/jaksi/sshesame <br />
+feel free to fork this :-)
 # How to use (On linux)
 sudo apt-get install python-pip <br />
 pip install twisted <br />
