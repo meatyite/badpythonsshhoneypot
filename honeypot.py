@@ -9,7 +9,6 @@ from twisted.internet import reactor
 from zope.interface import implements
 
 username = "root"
-working_dir = "/"
 
 
 class SSHDemoProtocol(recvline.HistoricRecvLine):
