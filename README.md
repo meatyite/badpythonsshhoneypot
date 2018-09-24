@@ -22,4 +22,5 @@ you can replace cpuinfo and passwd files with your own fake ones
 # Test the honeypot
 ssh root@127.0.0.1 -p 2222 <br />
 (the password is "password")
-
+# License 
+this repository is licensed under the "Do What The F*ck You Want To" Public License (wtfpl) see LICENSE.MD
